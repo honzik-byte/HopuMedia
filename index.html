@@ -22,103 +22,75 @@
 </head>
 
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
 
     <!-- Nav -->
-    <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <img src="images/logo.png" alt="HopuMedia Logo" class="logo-img">
-            </a>
-
-            <ul class="nav-links">
-                <li><a href="#sluzby">Služby</a></li>
-                <li><a href="#jak-to-funguje">Proces</a></li>
-                <li><a href="#cenik">Ceník</a></li>
-                <li><a href="#projekty">Ukázky</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
-            </ul>
-
-            <div class="nav-actions">
-                <a href="index.html#lead-magnet" class="btn btn-outline nav-cta"
-                    style="margin-right: 12px; align-items: center; gap: 8px; border-color: rgba(255, 71, 87, 0.3); background: rgba(255, 71, 87, 0.05); color: #fff;">
-                    <i data-lucide="trending-down" style="width: 18px; height: 18px; color: #ff4757;"></i> Proč váš web
-                    neprodává?
+    <div class="navbar-wrapper">
+        <nav class="navbar pill-navbar" id="navbar">
+            <div class="nav-container">
+                <a href="#" class="logo">
+                    <img src="images/logo.png" alt="HopuMedia Logo" class="logo-img" loading="lazy">
                 </a>
-                <a href="#kontakt" class="btn btn-primary nav-cta">Získat nabídku</a>
-                <button class="mobile-menu-btn" aria-label="Toggle menu">
-                    <i data-lucide="menu"></i>
-                </button>
+
+                <ul class="nav-links">
+                    <li><a href="#sluzby">Služby</a></li>
+                    <li><a href="#jak-to-funguje">Jak to funguje?</a></li>
+                    <li><a href="#reference">Reference</a></li>
+                    <li><a href="#cenik">Ceník</a></li>
+                    <li><a href="#projekty">Naše práce</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="#kontakt" class="nav-btn nav-cta">Spojme se!</a>
+                    <button class="mobile-menu-btn" aria-label="Toggle menu">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
             </div>
-        </div>
-        <!-- Mobile menu container -->
-        <div class="mobile-menu" id="mobile-menu">
-            <ul>
-                <li><a href="#sluzby">Služby</a></li>
-                <li><a href="#jak-to-funguje">Proces</a></li>
-                <li><a href="#cenik">Ceník</a></li>
-                <li><a href="#projekty">Ukázky</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
-                <li style="margin-top: 16px;"><a href="#lead-magnet" style="color:#ff4757;"><i
-                            data-lucide="trending-down"
-                            style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i>
-                        E-book ZDARMA</a></li>
-            </ul>
-        </div>
-    </nav>
+            <div class="mobile-menu" id="mobile-menu">
+                <ul>
+                    <li><a href="#sluzby">Služby</a></li>
+                    <li><a href="#jak-to-funguje">Jak to funguje?</a></li>
+                    <li><a href="#reference">Reference</a></li>
+                    <li><a href="#cenik">Ceník</a></li>
+                    <li><a href="#projekty">Naše práce</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="hero section">
-            <!-- Background Glow & Grid with Parallax -->
-            <div class="glow-bg top-left" data-parallax="0.2"></div>
-            <div class="glow-bg bottom-right" data-parallax="0.4"></div>
-            <div class="grid-bg" data-parallax="0.1"></div>
-
-            <!-- WOW Effect Canvas -->
-            <canvas id="hero-canvas"></canvas>
+        <section id="hero" class="hero section new-hero">
+            <!-- Background gradient -->
+            <div class="hero-bg-gradient"></div>
 
             <div class="container hero-container">
-                <div class="trust-badge reveal-up">
-                    <span class="pulse-dot"></span>
-                    Rychlé spuštění &nbsp;&bull;&nbsp; Výkon měřitelný čísly &nbsp;&bull;&nbsp; Bez zbytečné složitosti
-                </div>
-
-                <h1 class="hero-title reveal-up" style="transition-delay: 100ms;">
-                    Micro-weby & E-shopy, <br />které <span class="text-accent">prodávají</span>.
+                <h1 class="hero-title reveal-up">
+                    Až 74 % lidí opustí web jen<br>kvůli špatnému designu.
                 </h1>
 
-                <p class="hero-subtitle reveal-up" style="transition-delay: 200ms;">
-                    Vytváříme moderní landing pages a efektivní e-shopy na míru.
-                    Bez korporátní vaty. Měníme návštěvníky na reálné zákazníky pro váš byznys.
+                <p class="hero-subtitle reveal-up" style="transition-delay: 100ms;">
+                    Nenechte si utéct zákazníky jen<br>
+                    proto, že váš design není dost<br>
+                    dobrý.
                 </p>
 
-                <div class="hero-cta reveal-up" style="transition-delay: 300ms;">
-                    <a href="#kontakt" class="btn btn-primary btn-lg">Nezávazná konzultace</a>
-                    <a href="#projekty" class="btn btn-secondary btn-lg">Ukázky webů</a>
+                <div class="hero-cta reveal-up" style="transition-delay: 200ms;">
+                    <a href="#kontakt" class="btn-glow-wrapper">
+                        <span class="btn-glow-inner">To chci!</span>
+                    </a>
                 </div>
 
-                <div class="hero-stats reveal-up" style="transition-delay: 400ms;">
-                    <div class="stat-item">
-                        <p class="stat-value">3–7 dní</p>
-                        <p class="stat-label">Avg. launch</p>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="stat-item">
-                        <p class="stat-value">+40%</p>
-                        <p class="stat-label">Víc leadů</p>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="stat-item">
-                        <p class="stat-value">50+</p>
-                        <p class="stat-label">Spuštěných webů</p>
-                    </div>
-                </div>
-            </div>
+                <p class="hero-quote reveal-up" style="transition-delay: 250ms;">
+                    "Na první dojem nemáte nikdy druhou šanci." - Will Rogers
+                </p>
 
-            <div class="scroll-indicator">
-                <div class="mouse">
-                    <div class="wheel"></div>
+                <div class="hero-social-proof reveal-up" style="transition-delay: 300ms;">
+                    <p class="social-proof-text">Zakládáme si na <strong>100% spokojenosti</strong> a spouštíme web už <strong>do 7 dnů</strong>.</p>
                 </div>
             </div>
         </section>
@@ -166,7 +138,7 @@
         <!-- Services Section -->
         <section id="sluzby" class="sluzby section">
             <div class="container">
-                <div class="section-header reveal-up">
+                <div class="section-header reveal-scale">
                     <h2 class="section-title">Naše <span class="text-accent">Služby</span></h2>
                 </div>
 
@@ -215,7 +187,7 @@
         <!-- How it works Section -->
         <section id="jak-to-funguje" class="how-it-works section">
             <div class="container">
-                <div class="section-header reveal-up">
+                <div class="section-header reveal-scale">
                     <h2 class="section-title">Jak to <span class="text-accent">funguje</span></h2>
                 </div>
 
@@ -252,7 +224,7 @@
         <!-- Testimonials Section -->
         <section id="reference" class="testimonials section">
             <div class="container">
-                <div class="section-header reveal-up">
+                <div class="section-header reveal-scale">
                     <h2 class="section-title">Co o nás říkají <span class="text-accent">klienti</span></h2>
                     <p>Skutečné výsledky od lidí, kterým jsme pomohli růst.</p>
                 </div>
@@ -333,8 +305,9 @@
             <div class="glow-bg top-right"></div>
 
             <div class="container">
-                <div class="section-header reveal-up">
-                    <h2 class="section-title"><span class="text-accent">Ceník</span> balíčků</h2>
+                <div class="section-header reveal-scale">
+                    <h2 class="section-title">Férový <span class="text-accent">ceník</span></h2>
+                    <p>Vyberte si balíček, který nejlépe odpovídá vašim cílům.</p>
                 </div>
 
                 <div class="pricing-grid">
@@ -422,8 +395,9 @@
         <!-- Portfolio Section -->
         <section id="projekty" class="portfolio section">
             <div class="container">
-                <div class="section-header reveal-up">
-                    <h2 class="section-title">Naše <span class="text-accent">ukázky</span></h2>
+                <div class="section-header reveal-scale">
+                    <h2 class="section-title">Naše <span class="text-accent">práce</span></h2>
+                    <p>Ukázky projektů, které generují reálné zisky.</p>
                 </div>
 
                 <div class="portfolio-grid">
@@ -502,7 +476,7 @@
         <!-- Blog Section -->
         <section id="blog" class="blog section">
             <div class="container">
-                <div class="section-header reveal-up">
+                <div class="section-header reveal-scale">
                     <h2 class="section-title">Nejnovější z <span class="text-accent">Blogu</span></h2>
                     <p>Tipy a triky pro vylepšení vašich konverzí a výkonu na webu.</p>
                 </div>
@@ -598,29 +572,18 @@
             </div>
         </section>
 
-        <!-- Lead Magnet Section -->
-        <section id="lead-magnet" class="lead-magnet section">
+        <!-- Calendly Booking Section -->
+        <section id="rezervace" class="rezervace section">
             <div class="container">
-                <div class="lead-magnet-card glass reveal-up">
-                    <div class="lm-content">
-                        <h2>Ztrácíte 90 % návštěvníků. <br><span class="text-accent">Zabrzděte to.</span></h2>
-                        <p>Stáhněte si případovku s 5 největšími "zabijáky" konverzí, které ničí váš e-shop, a zjistěte,
-                            jak z návštěvníků udělat platící zákazníky.</p>
-                        <form id="ebook-form" class="ebook-form">
-                            <input type="text" id="ebook-name" placeholder="Vaše jméno" required>
-                            <input type="email" id="ebook-email" placeholder="vas@email.cz" required>
-                            <button type="submit" class="btn btn-primary">Chci E-book ZDARMA</button>
-                        </form>
-                        <p class="form-success glass-success" id="ebook-success"
-                            style="display:none; margin-top: 16px;">Skvělé! Odkaz ke stažení letí do vaší schránky.
-                            (Mock submit)</p>
-                    </div>
-                    <div class="lm-image">
-                        <div class="ebook-mockup">
-                            <i data-lucide="book-open"></i>
-                            <span>E-book<br>ZDARMA</span>
-                        </div>
-                    </div>
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">Domluvte si <span class="text-accent">konzultaci</span></h2>
+                    <p>Zabere to jen 15 minut. Probereme váš projekt a zjistíme, zda vám dokážeme pomoci.</p>
+                </div>
+                <div class="calendly-wrapper glass reveal-up" style="padding: 24px; border-radius: var(--radius-lg);">
+                    <!-- Calendly inline widget begin -->
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/hopumedia/30min" style="min-width:320px;height:700px;"></div>
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    <!-- Calendly inline widget end -->
                 </div>
             </div>
         </section>
@@ -647,13 +610,6 @@
 
                     <!-- Contact Form & Calendly -->
                     <div class="contact-form-wrapper glass reveal-right">
-                        <div class="contact-tabs"
-                            style="display: flex; gap: 8px; background: rgba(255, 255, 255, 0.05); padding: 6px; border-radius: var(--radius-md); margin-bottom: 24px;">
-                            <button type="button" class="contact-tab active" data-target="form-tab">Napsat
-                                zprávu</button>
-                            <button type="button" class="contact-tab" data-target="calendly-tab">Domluvit call</button>
-                        </div>
-
                         <!-- Form Tab -->
                         <div id="form-tab" class="contact-tab-content active">
                             <form id="lead-form" class="contact-form">
@@ -704,18 +660,6 @@
                                 <p class="form-success glass-success" style="display:none;">Děkujeme! Brzy se vám
                                     ozveme.
                                 </p>
-                            </form>
-                        </div>
-
-                        <!-- Calendly Tab -->
-                        <div id="calendly-tab" class="contact-tab-content"
-                            style="display: none; height: 100%; min-height: 600px; padding: 12px 0;">
-                            <!-- Calendly inline widget begin -->
-                            <div class="calendly-inline-widget" data-url="https://calendly.com/hopumedia"
-                                style="min-width:320px;height:100%;min-height:550px;"></div>
-                            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"
-                                async></script>
-                            <!-- Calendly inline widget end -->
                         </div>
                     </div>
                 </div>
@@ -724,23 +668,54 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-brand">
-                <a href="#" class="logo">
-                    <img src="images/logo.png" alt="HopuMedia Logo" class="logo-img">
-                </a>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand & Info -->
+                <div class="footer-col brand-col">
+                    <a href="#" class="logo footer-logo">
+                        <img src="images/logo.png" alt="HopuMedia Logo" class="logo-img" loading="lazy">
+                    </a>
+                    <p class="footer-desc">Tvoříme moderní weby a e-shopy, které prodávají. Zaměřujeme se na čistý design, rychlost a reálné výsledky pro vaše podnikání.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Navigation -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Navigace</h4>
+                    <ul class="footer-links-col">
+                        <li><a href="#sluzby">Služby</a></li>
+                        <li><a href="#jak-to-funguje">Jak to funguje?</a></li>
+                        <li><a href="#reference">Reference</a></li>
+                        <li><a href="#cenik">Ceník</a></li>
+                        <li><a href="#projekty">Naše práce</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact -->
+                <div class="footer-col contact-col">
+                    <h4 class="footer-heading">Kontakt</h4>
+                    <ul class="footer-contact-info">
+                        <li>
+                            <i data-lucide="mail"></i>
+                            <a href="mailto:info@hopumedia.cz">info@hopumedia.cz</a>
+                        </li>
+                        <li>
+                            <i data-lucide="phone"></i>
+                            <a href="tel:+420720654240">+420 720 654 240</a>
+                        </li>
+                    </ul>
+                    <div class="billing-info">
+                        <p>IČO: 21989982</p>
+                        <p>Nejsme plátci DPH.</p>
+                    </div>
+                </div>
             </div>
 
-            <ul class="footer-links">
-                <li><a href="#sluzby">Služby</a></li>
-                <li><a href="#cenik">Ceník</a></li>
-                <li><a href="#projekty">Ukázky</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
-            </ul>
-
             <div class="footer-bottom">
-                <p>HopuMedia – micro-webs & e-shopy.</p>
-                <p class="footer-copy">&copy; <span id="year"></span> HopuMedia.</p>
+                <p>&copy; <span id="year"></span> HopuMedia. Všechna práva vyhrazena.</p>
             </div>
         </div>
     </footer>

@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileStickyCta = document.getElementById('mobile-sticky-cta');
 
     // 3. Scroll Reveal Animation
-    const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+    const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-scale');
     const revealOptions = {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px"
@@ -29,8 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
         revealOnScroll.observe(el);
     });
 
-    // Handle scroll events
+    // 3. Scroll Logic
     const parallaxElements = document.querySelectorAll('[data-parallax]');
+    const scrollProgress = document.getElementById('scroll-progress');
 
     window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
@@ -42,13 +43,20 @@ document.addEventListener('DOMContentLoaded', () => {
             el.style.transform = `translateY(${yPos}px)`;
         });
 
-        // Navbar bg change
+        // Navbar & Scroll to top
         if (scrollY > 50) {
             navbar.classList.add('scrolled');
             scrollBtn.classList.add('visible');
         } else {
             navbar.classList.remove('scrolled');
             scrollBtn.classList.remove('visible');
+        }
+
+        // Scroll Progress Bar
+        if (scrollProgress) {
+            const totalHeight = document.body.scrollHeight - window.innerHeight;
+            const progress = (scrollY / totalHeight) * 100;
+            scrollProgress.style.width = `${progress}%`;
         }
 
         // Active state for nav links
@@ -76,6 +84,43 @@ document.addEventListener('DOMContentLoaded', () => {
                 mobileStickyCta.classList.remove('visible');
             }
         }
+    });
+
+    // 3.5 Animated Number Counters
+    const counters = document.querySelectorAll('.counter');
+    const counterOptions = {
+        threshold: 0.5,
+        rootMargin: "0px"
+    };
+
+    const animateCounters = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = +counter.getAttribute('data-target');
+                const duration = 2000; // ms
+                const increment = target / (duration / 16); // 60 fps math
+
+                let currentCount = 0;
+                
+                const updateCounter = () => {
+                    currentCount += increment;
+                    if (currentCount < target) {
+                        counter.innerText = Math.ceil(currentCount);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+
+                updateCounter();
+                observer.unobserve(counter);
+            }
+        });
+    }, counterOptions);
+
+    counters.forEach(counter => {
+        animateCounters.observe(counter);
     });
 
     // 4. Mobile Menu Toggle
@@ -145,85 +190,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 9. WOW Effect - Canvas Particles
-    const canvas = document.getElementById('hero-canvas');
-    if (canvas) {
-        const ctx = canvas.getContext('2d');
-        let width, height;
-        let particles = [];
-
-        const initCanvas = () => {
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = document.getElementById('hero').offsetHeight;
-        };
-
-        class Particle {
-            constructor() {
-                this.x = Math.random() * width;
-                this.y = Math.random() * height;
-                this.vx = (Math.random() - 0.5) * 0.5;
-                this.vy = (Math.random() - 0.5) * 0.5;
-                this.radius = Math.random() * 2;
-            }
-
-            update() {
-                this.x += this.vx;
-                this.y += this.vy;
-
-                if (this.x < 0 || this.x > width) this.vx *= -1;
-                if (this.y < 0 || this.y > height) this.vy *= -1;
-            }
-
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(56, 182, 255, 0.5)';
-                ctx.fill();
-            }
-        }
-
-        const createParticles = () => {
-            particles = [];
-            const numParticles = Math.min(Math.floor(window.innerWidth / 15), 100);
-            for (let i = 0; i < numParticles; i++) {
-                particles.push(new Particle());
-            }
-        };
-
-        const animateParticles = () => {
-            ctx.clearRect(0, 0, width, height);
-
-            for (let i = 0; i < particles.length; i++) {
-                particles[i].update();
-                particles[i].draw();
-
-                for (let j = i + 1; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x;
-                    const dy = particles[i].y - particles[j].y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-
-                    if (distance < 120) {
-                        ctx.beginPath();
-                        ctx.strokeStyle = `rgba(56, 182, 255, ${0.15 * (1 - distance / 120)})`;
-                        ctx.lineWidth = 1;
-                        ctx.moveTo(particles[i].x, particles[i].y);
-                        ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.stroke();
-                    }
-                }
-            }
-            requestAnimationFrame(animateParticles);
-        };
-
-        window.addEventListener('resize', () => {
-            initCanvas();
-            createParticles();
-        });
-
-        initCanvas();
-        createParticles();
-        animateParticles();
-    }
 
     // 7. Form Validation & Mock Submit
     const leadForm = document.getElementById('lead-form');
@@ -497,28 +463,4 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
-    // 14. Contact Tabs (Form / Calendly)
-    const contactTabs = document.querySelectorAll('.contact-tab');
-    contactTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            // Remove active from all tabs
-            contactTabs.forEach(t => t.classList.remove('active'));
-            // Add active to clicked tab
-            tab.classList.add('active');
-
-            // Hide all tab contents
-            document.querySelectorAll('.contact-tab-content').forEach(content => {
-                content.style.display = 'none';
-                content.classList.remove('active');
-            });
-
-            // Show target
-            const targetId = tab.getAttribute('data-target');
-            const targetContent = document.getElementById(targetId);
-            if (targetContent) {
-                targetContent.style.display = 'block';
-                targetContent.classList.add('active');
-            }
-        });
-    });
 });
