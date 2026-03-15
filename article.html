@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Článek | HopuMedia</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .article-hero {
+            padding: clamp(120px, 15vh, 160px) 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-meta {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .article-meta span {
+            color: var(--accent);
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .article-title {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 40px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.1;
+        }
+
+        .article-image-wrapper {
+            width: 100%;
+            position: relative;
+            margin-bottom: 80px;
+        }
+
+        .article-image {
+            width: 100%;
+            height: 60vh;
+            min-height: 400px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            display: block;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .article-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 60px;
+            max-width: 1100px;
+            margin: 0 auto 100px;
+        }
+
+        @media (min-width: 900px) {
+            .article-layout {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+
+        .article-body {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-main);
+            text-align: left;
+        }
+
+        .article-body h3 {
+            font-size: 1.75rem;
+            margin: 48px 0 24px;
+            color: #fff;
+        }
+
+        .article-body p {
+            margin-bottom: 24px;
+            color: var(--text-muted);
+        }
+
+        .article-body blockquote {
+            border-left: 4px solid var(--accent);
+            padding: 24px;
+            margin: 40px 0;
+            background: rgba(56, 182, 255, 0.05);
+            font-style: italic;
+            font-size: 1.25rem;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        }
+
+        /* Sidebar styling */
+        .sidebar-widget {
+            position: sticky;
+            top: 120px;
+        }
+
+        .sidebar-card {
+            padding: 32px;
+            margin-bottom: 32px;
+        }
+
+        .sidebar-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        .sidebar-card p {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Nav -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="HopuMedia Logo" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#sluzby">Služby</a></li>
+                <li><a href="index.html#jak-to-funguje">Proces</a></li>
+                <li><a href="index.html#cenik">Ceník</a></li>
+                <li><a href="index.html#projekty">Ukázky</a></li>
+                <li><a href="index.html#blog" class="active">Blog</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="index.html#lead-magnet" class="btn btn-outline nav-cta"
+                    style="margin-right: 12px; align-items: center; gap: 8px; border-color: rgba(255, 71, 87, 0.3); background: rgba(255, 71, 87, 0.05); color: #fff;">
+                    <i data-lucide="trending-down" style="width: 18px; height: 18px; color: #ff4757;"></i> Proč váš web
+                    neprodává?
+                </a>
+                <a href="index.html#kontakt" class="btn btn-primary nav-cta">Získat nabídku</a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu container -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul>
+                <li><a href="index.html#sluzby">Služby</a></li>
+                <li><a href="index.html#jak-to-funguje">Proces</a></li>
+                <li><a href="index.html#cenik">Ceník</a></li>
+                <li><a href="index.html#projekty">Ukázky</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+                <li style="margin-top: 16px;"><a href="index.html#lead-magnet" style="color:#ff4757;"><i
+                            data-lucide="trending-down"
+                            style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i>
+                        E-book ZDARMA</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="article-hero">
+            <div class="container">
+                <a href="index.html#blog" class="back-link"><i data-lucide="arrow-left"></i> Zpět na přehled</a>
+
+                <div id="article-loader">Načítám článek...</div>
+
+                <div id="article-content" style="display: none;">
+                    <div class="article-meta">
+                        <span id="article-date"></span> &bull; <span>5 min čtení</span>
+                    </div>
+
+                    <h1 class="article-title" id="article-title"></h1>
+
+                    <div class="article-image-wrapper">
+                        <div class="glow-bg top-right" style="z-index: -1;"></div>
+                        <img src="" alt="Článek obrázek" class="article-image" id="article-image">
+                    </div>
+
+                    <div class="article-layout">
+                        <!-- Left Column (Body) -->
+                        <div class="article-body" id="article-body"></div>
+
+                        <!-- Right Column (Sidebar) -->
+                        <aside class="sidebar-widget">
+                            <div class="sidebar-card glass">
+                                <h4>Zvyšte své konverze</h4>
+                                <p>Nechte si od nás navrhnout e-shop nebo landing page, která prodává. Máme systém a
+                                    data.</p>
+                                <a href="index.html#kontakt" class="btn btn-primary btn-full">Chci konzultaci</a>
+                            </div>
+
+                            <div class="sidebar-card glass"
+                                style="background: linear-gradient(135deg, rgba(56, 182, 255, 0.1), rgba(0,0,0,0));">
+                                <i data-lucide="book-open"
+                                    style="color: var(--accent); width: 32px; height: 32px; margin-bottom: 16px;"></i>
+                                <h4>E-book Zdarma</h4>
+                                <p>Stáhněte si případovku s 5 "zabijáky" konverzí a začněte růst.</p>
+                                <a href="index.html#lead-magnet" class="btn btn-outline btn-full">Stáhnout PDF</a>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+
+                <div id="article-error" style="display: none; padding: 100px 0;">
+                    <h2>Omlouváme se, článek nebyl nalezen.</h2>
+                    <br>
+                    <a href="index.html#blog" class="btn btn-primary">Zpět na blog</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                <p>HopuMedia – micro-webs & e-shopy.</p>
+                <p class="footer-copy">&copy; <span id="year"></span> HopuMedia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Widget -->
+    <a href="https://wa.me/420720654240" target="_blank" rel="noopener noreferrer" class="whatsapp-widget"
+        aria-label="Napište nám na WhatsApp">
+        <i data-lucide="message-circle"></i>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const articleId = urlParams.get('id');
+
+            if (!articleId) {
+                showError();
+                return;
+            }
+
+            fetch('articles.json')
+                .then(res => res.json())
+                .then(articles => {
+                    const article = articles.find(a => a.id === articleId);
+                    if (article) {
+                        document.title = article.title + " | HopuMedia";
+                        document.getElementById('article-date').textContent = new Date(article.date).toLocaleDateString('cs-CZ');
+                        document.getElementById('article-title').textContent = article.title;
+                        document.getElementById('article-image').src = article.image;
+                        document.getElementById('article-image').alt = article.title;
+
+                        // Adding a mock blockquote to showcase the new styling if none exists
+                        let contentStr = article.content;
+                        if (!contentStr.includes('blockquote')) {
+                            // Insert a random blockquote for preview purposes
+                            contentStr = contentStr.replace('</h3>', '</h3><blockquote>"Pokud nedokážete návštěvníkovi do 3 vteřin vysvětlit, proč by měl u vás nakoupit, pravděpodobně odejde ke konkurenci."</blockquote>');
+                        }
+
+                        document.getElementById('article-body').innerHTML = contentStr;
+
+                        document.getElementById('article-loader').style.display = 'none';
+                        document.getElementById('article-content').style.display = 'block';
+                    } else {
+                        showError();
+                    }
+                })
+                .catch(() => showError());
+
+            function showError() {
+                document.getElementById('article-loader').style.display = 'none';
+                document.getElementById('article-error').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
+</html>

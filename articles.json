@@ -1,0 +1,26 @@
+[
+  {
+    "id": "jak-na-konverze",
+    "title": "Jak zvýšit konverze na vašem webu o 40 %",
+    "date": "2026-02-23",
+    "excerpt": "Praktické tipy a triky, jak přesvědčit návštěvníky k akci. Zjistěte, proč složité weby nefungují a jak to napravit.",
+    "content": "<p>Většina webů trpí jedním zásadním problémem: jsou příliš složité. Návštěvník přijde na stránku a neví, co má dělat. V tomto článku si ukážeme, proč je jednoduchost klíčem k vysokým konverzím.</p><h3>1. Méně je více</h3><p>Odstraňte všechny rušivé elementy, které nevedou k hlavní akci (např. odeslání poptávky nebo nákupu).</p><h3>2. Silné Call-to-Action (CTA)</h3><p>Vaše tlačítka by měla jasně říkat, co se stane po kliknutí. Ne 'Odeslat', ale 'Získat nezávaznou nabídku'.</p><h3>3. Rychlost načítání</h3><p>Každá sekunda navíc znamená ztrátu potenciálních zákazníků. Optimalizujte obrázky a minimalizujte kód.</p>",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800&h=500"
+  },
+  {
+    "id": "proc-micro-web",
+    "title": "Proč je moderní micro-web lepší než robustní WordPress",
+    "date": "2026-02-15",
+    "excerpt": "Srovnání tradičních CMS systémů s moderními, na míru kódovanými landing pages z pohledu marketingu a rychlosti.",
+    "content": "<p>Znáte ten pocit: pořídíte si drahý web na WordPressu, ale po roce se načítá 5 sekund a je plný zbytečných pluginů. Micro-weby jsou odpovědí na tento problém.</p><h3>Rychlost na prvním místě</h3><p>Micro-weby se načítají bleskově. Nemají žádnou databázi v pozadí (pokud ji nutně nepotřebují), takže server vrací hotové HTML okamžitě.</p><h3>Bezpečnost</h3><p>Zatímco WordPress je terčem mnoha útoků na zranitelné pluginy, čistě kódovaný web je prakticky nedobytný.</p><h3>Údržba</h3><p>Ušetříte hodiny času a tisíce korun na měsíční správě a aktualizacích.</p>",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800&h=500"
+  },
+  {
+    "id": "trendy-e-commerce",
+    "title": "Trendy v E-commerce pro tento rok",
+    "date": "2026-01-20",
+    "excerpt": "Podívejte se, co funguje v e-shopech právě teď. Od rychlých košíků po headless řešení pro maximální škálovatelnost.",
+    "content": "<p>Svět e-commerce se mění bleskovým tempem. Co fungovalo před dvěma lety, dnes už nestačí.</p><h3>Jednostránkový košík (One-page Checkout)</h3><p>Nejčastější důvod, proč lidé nedokončí nákup? Příliš mnoho kroků. Jednostránkový košík zvyšuje konverze.</p><h3>Headless E-commerce</h3><p>Oddělení frontendu (to co vidí uživatel) od backendu (logika a databáze). To umožňuje bleskové načítání a flexibilitu, což je případ našeho projektu Draiv.cz.</p>",
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800&h=500"
+  }
+]

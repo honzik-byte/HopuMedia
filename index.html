@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HopuMedia | Micro-weby + E-shopy, které prodávají.</title>
+    <meta name="description"
+        content="Tvoříme vysoce konverzní micro-weby a e-shopy na míru. Získejte zákazníky rychle a bez složitostí pro váš byznys.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Nav -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="HopuMedia Logo" class="logo-img">
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#sluzby">Služby</a></li>
+                <li><a href="#jak-to-funguje">Proces</a></li>
+                <li><a href="#cenik">Ceník</a></li>
+                <li><a href="#projekty">Ukázky</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="index.html#lead-magnet" class="btn btn-outline nav-cta"
+                    style="margin-right: 12px; align-items: center; gap: 8px; border-color: rgba(255, 71, 87, 0.3); background: rgba(255, 71, 87, 0.05); color: #fff;">
+                    <i data-lucide="trending-down" style="width: 18px; height: 18px; color: #ff4757;"></i> Proč váš web
+                    neprodává?
+                </a>
+                <a href="#kontakt" class="btn btn-primary nav-cta">Získat nabídku</a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu container -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul>
+                <li><a href="#sluzby">Služby</a></li>
+                <li><a href="#jak-to-funguje">Proces</a></li>
+                <li><a href="#cenik">Ceník</a></li>
+                <li><a href="#projekty">Ukázky</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+                <li style="margin-top: 16px;"><a href="#lead-magnet" style="color:#ff4757;"><i
+                            data-lucide="trending-down"
+                            style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i>
+                        E-book ZDARMA</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero section">
+            <!-- Background Glow & Grid with Parallax -->
+            <div class="glow-bg top-left" data-parallax="0.2"></div>
+            <div class="glow-bg bottom-right" data-parallax="0.4"></div>
+            <div class="grid-bg" data-parallax="0.1"></div>
+
+            <!-- WOW Effect Canvas -->
+            <canvas id="hero-canvas"></canvas>
+
+            <div class="container hero-container">
+                <div class="trust-badge reveal-up">
+                    <span class="pulse-dot"></span>
+                    Rychlé spuštění &nbsp;&bull;&nbsp; Výkon měřitelný čísly &nbsp;&bull;&nbsp; Bez zbytečné složitosti
+                </div>
+
+                <h1 class="hero-title reveal-up" style="transition-delay: 100ms;">
+                    Micro-weby & E-shopy, <br />které <span class="text-accent">prodávají</span>.
+                </h1>
+
+                <p class="hero-subtitle reveal-up" style="transition-delay: 200ms;">
+                    Vytváříme moderní landing pages a efektivní e-shopy na míru.
+                    Bez korporátní vaty. Měníme návštěvníky na reálné zákazníky pro váš byznys.
+                </p>
+
+                <div class="hero-cta reveal-up" style="transition-delay: 300ms;">
+                    <a href="#kontakt" class="btn btn-primary btn-lg">Nezávazná konzultace</a>
+                    <a href="#projekty" class="btn btn-secondary btn-lg">Ukázky webů</a>
+                </div>
+
+                <div class="hero-stats reveal-up" style="transition-delay: 400ms;">
+                    <div class="stat-item">
+                        <p class="stat-value">3–7 dní</p>
+                        <p class="stat-label">Avg. launch</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="stat-item">
+                        <p class="stat-value">+40%</p>
+                        <p class="stat-label">Víc leadů</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="stat-item">
+                        <p class="stat-value">50+</p>
+                        <p class="stat-label">Spuštěných webů</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem / Solution Section -->
+        <section id="problem" class="problem section">
+            <div class="container">
+                <div class="problem-grid">
+                    <!-- Pain points -->
+                    <div class="pain-points reveal-left">
+                        <ul class="pain-list">
+                            <li>
+                                <i data-lucide="x-circle" class="icon-error"></i>
+                                <span><strong>Web bez konverze:</strong> Hezký design, ale lidi přijdou a nic
+                                    neudělají.</span>
+                            </li>
+                            <li>
+                                <i data-lucide="x-circle" class="icon-error"></i>
+                                <span><strong>Zastaralý E-shop:</strong> Lidé odcházejí v košíku, protože nákup je
+                                    složitý.</span>
+                            </li>
+                            <li>
+                                <i data-lucide="x-circle" class="icon-error"></i>
+                                <span><strong>Technické peklo:</strong> Nemáte čas se starat o weby, zabezpečení a
+                                    složité doplňky.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Solution -->
+                    <div class="solution-card glass reveal-right">
+                        <div class="solution-header">
+                            <i data-lucide="check-circle" class="icon-success"></i>
+                            <h3>Řešení HopuMedia</h3>
+                        </div>
+                        <p>
+                            Místo složitých labyrintů stavíme přímočaré landing pages a ziskové e-shopy s jediným cílem:
+                            <strong>okamžitá konverze</strong> a hladký průchod košíkem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="sluzby" class="sluzby section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">Naše <span class="text-accent">Služby</span></h2>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card glass reveal-up">
+                        <div class="service-icon-wrapper">
+                            <i data-lucide="layout" class="service-icon"></i>
+                        </div>
+                        <h3>Micro-website</h3>
+                        <p class="service-desc">Rychlá, moderní a konverzní landing page navržená pro okamžitý sběr
+                            poptávek.</p>
+                        <ul class="service-features">
+                            <li><i data-lucide="check"></i> Rychlá landing page</li>
+                            <li><i data-lucide="check"></i> Designové copy a CTA</li>
+                            <li><i data-lucide="check"></i> Responzivní vzhled</li>
+                            <li><i data-lucide="check"></i> Základní SEO a rychlost</li>
+                        </ul>
+                        <div class="service-footer">
+                            <a href="#kontakt" class="btn btn-outline btn-full">Chci moderní web</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card glass reveal-up" style="transition-delay: 100ms;">
+                        <div class="service-icon-wrapper">
+                            <i data-lucide="target" class="service-icon"></i>
+                        </div>
+                        <h3>E-shop na míru</h3>
+                        <p class="service-desc">Krásný, funkční a rychlý e-shop stavěný primárně na snadný prodej vašich
+                            produktů.</p>
+                        <ul class="service-features">
+                            <li><i data-lucide="check"></i> Čistý design s košíkem</li>
+                            <li><i data-lucide="check"></i> Automatizace plateb</li>
+                            <li><i data-lucide="check"></i> Responzivní nákupní proces</li>
+                            <li><i data-lucide="check"></i> Skladová dostupnost a správa</li>
+                        </ul>
+                        <div class="service-footer">
+                            <a href="#kontakt" class="btn btn-outline btn-full">Chci moderní e-shop</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it works Section -->
+        <section id="jak-to-funguje" class="how-it-works section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">Jak to <span class="text-accent">funguje</span></h2>
+                </div>
+
+                <div class="timeline mt-12">
+                    <div class="timeline-item reveal-up">
+                        <div class="timeline-number">1</div>
+                        <div class="timeline-content glass">
+                            <h3>Rychlá konzultace (15 min)</h3>
+                            <p>Vyjasníme si váš cíl, identifikujeme cílového zákazníka a zjistíme, jestli vám náš systém
+                                pomůže růst.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal-up" style="transition-delay: 100ms;">
+                        <div class="timeline-number">2</div>
+                        <div class="timeline-content glass">
+                            <h3>Návrh struktury + Copy + Design</h3>
+                            <p>Připravíme wireframe, navrhneme vizuál, napíšeme texty trefné pro vaši cílovku a vyladíme
+                                flow webu.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal-up" style="transition-delay: 200ms;">
+                        <div class="timeline-number">3</div>
+                        <div class="timeline-content glass">
+                            <h3>Spuštění + Měření plateb</h3>
+                            <p>Spustíme web nebo e-shop, otestujeme nákupní a konverzní cesty a propojíme analytiku.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="reference" class="testimonials section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">Co o nás říkají <span class="text-accent">klienti</span></h2>
+                    <p>Skutečné výsledky od lidí, kterým jsme pomohli růst.</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card glass reveal-up">
+                        <div class="rating">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                        </div>
+                        <p class="testimonial-text">"Nový web od HopuMedia nám zvedl poptávky o 40 %. Design je čistý,
+                            vše funguje na mobilu a rychlost je neuvěřitelná. Doporučuji všema deseti."</p>
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <div>
+                                <h4>Petr Novák</h4>
+                                <p class="client-role">Majitel, Cleanify.cz</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card glass reveal-up" style="transition-delay: 100ms;">
+                        <div class="rating">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                        </div>
+                        <p class="testimonial-text">"Předchozí e-shop nám stagnoval. Po redesignu a přechodu k HopuMedia
+                            se konverze okamžitě zvedla a zákazníci si pochvalují nákupní proces."</p>
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <div>
+                                <h4>Jana Malá</h4>
+                                <p class="client-role">CEO, Najgingershot.cz</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card glass reveal-up" style="transition-delay: 200ms;">
+                        <div class="rating">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                        </div>
+                        <p class="testimonial-text">"Hledali jsme partnera pro náš headless e-shop a výběr byl jasný.
+                            Technická úroveň a osobní přístup kluků je prostě skvělý. Řeší problémy obratem."</p>
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <div>
+                                <h4>Martin Kovář</h4>
+                                <p class="client-role">Vedení, Draiv.cz</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="cenik" class="pricing section">
+            <!-- Background Glow -->
+            <div class="glow-bg top-right"></div>
+
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title"><span class="text-accent">Ceník</span> balíčků</h2>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Pricing Card 1 -->
+                    <div class="pricing-card glass reveal-up">
+                        <div class="pricing-header">
+                            <h3>Start</h3>
+                            <div class="price">
+                                <span class="amount">6 000</span>
+                                <span class="currency">Kč</span>
+                            </div>
+                            <p class="billing">Jednorázově</p>
+                        </div>
+                        <div class="pricing-body">
+                            <p class="pricing-desc">Micro-website pro ty, co už mají vlastní traffic.</p>
+                            <ul class="pricing-features">
+                                <li><i data-lucide="check"></i> Micro-website</li>
+                                <li><i data-lucide="check"></i> Čistý design & copy</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#kontakt" class="btn btn-outline btn-full" data-package="start">Vybrat Start</a>
+                        </div>
+                    </div>
+
+                    <!-- Pricing Card 2 (Recommended) -->
+                    <div class="pricing-card glass popular reveal-up" style="transition-delay: 100ms;">
+                        <div class="popular-badge">Doporučeno</div>
+                        <div class="pricing-header">
+                            <h3>E-shop</h3>
+                            <div class="price">
+                                <span class="amount">8 000</span>
+                                <span class="currency">Kč</span>
+                            </div>
+                            <p class="billing">Jednorázově</p>
+                        </div>
+                        <div class="pricing-body">
+                            <p class="pricing-desc">Elegantní e-shop s napojením na platby a dopravu.</p>
+                            <ul class="pricing-features">
+                                <li><i data-lucide="check"></i> Návrh a tvorba e-shopu</li>
+                                <li><i data-lucide="check"></i> Platební brány</li>
+                                <li><i data-lucide="check"></i> Design and copy the products</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#kontakt" class="btn btn-primary btn-full" data-package="eshop">Získat nezávaznou
+                                nabídku</a>
+                        </div>
+                    </div>
+
+                    <!-- Pricing Card 3 -->
+                    <div class="pricing-card glass reveal-up" style="transition-delay: 200ms;">
+                        <div class="pricing-header">
+                            <h3>Care</h3>
+                            <div class="pricing-toggle-wrapper">
+                                <span class="toggle-label active" id="label-monthly">Měsíčně</span>
+                                <label class="switch">
+                                    <input type="checkbox" id="pricing-toggle">
+                                    <span class="slider round"></span>
+                                </label>
+                                <span class="toggle-label" id="label-yearly">Ročně <span
+                                        class="badge-save">-30%</span></span>
+                            </div>
+                            <div class="price">
+                                <span class="amount" id="care-price">600</span>
+                                <span class="currency" id="care-currency">Kč / měsíc</span>
+                            </div>
+                            <p class="billing" id="care-billing">Měsíčně</p>
+                        </div>
+                        <div class="pricing-body">
+                            <p class="pricing-desc">Spolehlivý provoz a správa vašeho micro-webu.</p>
+                            <ul class="pricing-features">
+                                <li><i data-lucide="check"></i> Tvorba záloh a údržba</li>
+                                <li><i data-lucide="check"></i> Správa a provoz webu</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#kontakt" class="btn btn-outline btn-full" data-package="care">Vybrat Care</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="projekty" class="portfolio section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">Naše <span class="text-accent">ukázky</span></h2>
+                </div>
+
+                <div class="portfolio-grid">
+                    <!-- Portfolio Item 1 -->
+                    <div class="portfolio-card glass reveal-up" data-modal="cleanify">
+                        <div class="portfolio-img-wrapper">
+                            <div class="portfolio-overlay"></div>
+                            <div class="portfolio-placeholder">
+                                <i data-lucide="sparkles"></i>
+                                <span>Zobrazit Case Study</span>
+                            </div>
+                            <div class="portfolio-tags">
+                                <span class="tag">Služby</span>
+                                <span class="tag">Micro-web</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Cleanify.cz</h3>
+                            <p>Moderní web pro úklidové služby. Důraz na čistotu, rychlou rezervaci a budování důvěry
+                                pro lokální klientelu.</p>
+                            <span class="portfolio-link">Číst více <i data-lucide="arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Item 2 -->
+                    <div class="portfolio-card glass reveal-up" data-modal="gingershot"
+                        style="transition-delay: 100ms;">
+                        <div class="portfolio-img-wrapper">
+                            <div class="portfolio-overlay"></div>
+                            <div class="portfolio-placeholder">
+                                <i data-lucide="coffee"></i>
+                                <span>Zobrazit Case Study</span>
+                            </div>
+                            <div class="portfolio-tags">
+                                <span class="tag">E-shop</span>
+                                <span class="tag">Zdraví</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Najgingershot.cz</h3>
+                            <p>Specializovaný e-shop zaměřený na prémiové ginger shoty. Optimalizovaný nákupní košík pro
+                                maximální konverzi předplatitelů.</p>
+                            <span class="portfolio-link">Číst více <i data-lucide="arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Item 3 -->
+                    <div class="portfolio-card glass reveal-up" data-modal="draiv" style="transition-delay: 200ms;">
+                        <div class="portfolio-img-wrapper">
+                            <div class="portfolio-overlay"></div>
+                            <div class="portfolio-placeholder">
+                                <i data-lucide="hammer"></i>
+                                <span>Zobrazit Case Study</span>
+                            </div>
+                            <div class="portfolio-tags">
+                                <span class="tag">E-shop / Headless</span>
+                                <span class="tag">V přípravě</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Draiv.cz</h3>
+                            <p>Rozsáhlý e-shop momentálně ve fázi vývoje. Budujeme robustní řešení s vysokou
+                                škálovatelností a bleskovou rychlostí.</p>
+                            <span class="portfolio-link">Číst více <i data-lucide="arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-cta reveal-up">
+                    <a href="#kontakt" class="btn btn-secondary btn-lg">Chci podobný web <i
+                            data-lucide="arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">Nejnovější z <span class="text-accent">Blogu</span></h2>
+                    <p>Tipy a triky pro vylepšení vašich konverzí a výkonu na webu.</p>
+                </div>
+
+                <div class="blog-grid" id="blog-grid">
+                    <!-- Articles will be loaded here via JS -->
+                    <div style="text-align: center; width: 100%;">Načítám články...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq section">
+            <div class="container faq-container">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">Časté <span class="text-accent">dotazy</span></h2>
+                </div>
+
+                <div class="faq-list">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item glass reveal-up">
+                        <div class="faq-question">
+                            <h3>Jak rychle web dodáte?</h3>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Standardně spouštíme micro-weby do 3 až 7 pracovních dnů od ujasnění zadání. Rychlost je
+                                naše doména.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="faq-item glass reveal-up">
+                        <div class="faq-question">
+                            <h3>Co když nemám texty?</h3>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Texty tvoříme my. Během konzultace zjistíme, co prodáváte, a my připravíme prodejní copy,
+                                které převádí lidi na poptávky.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="faq-item glass reveal-up">
+                        <div class="faq-question">
+                            <h3>Bude to fungovat na mobilu?</h3>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Ano. Drtivá většina leadů dnes přichází přes smartphone, takže weby stavíme design and
+                                code "mobile-first".</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="faq-item glass reveal-up">
+                        <div class="faq-question">
+                            <h3>Zahrnuje cena e-shopu i platební brány?</h3>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Ano, v ceně 8 000 Kč je základní napojení populárních platebních bran (např. Stripe nebo
+                                Shoptet Pay) a provázání s dopravci, abyste rovnou mohli prodávat.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="faq-item glass reveal-up">
+                        <div class="faq-question">
+                            <h3>Kdo se bude starat o web?</h3>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>E-shop a weby stavíme na uživatelsky přívětivých platformách, kde si základní věci
+                                zvládnete upravit sami. Pokud byste ale chtěli dlouhodobou podporu, máme balíček Care.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="faq-item glass reveal-up">
+                        <div class="faq-question">
+                            <h3>Je to vhodné pro lokální službu?</h3>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Ideální. Zaměřujeme se právě na lokální služby a byznysy (fitka, beauty salony,
+                                řemeslníci, makléři), kde jsou rychlé poptávky k nezaplacení.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lead Magnet Section -->
+        <section id="lead-magnet" class="lead-magnet section">
+            <div class="container">
+                <div class="lead-magnet-card glass reveal-up">
+                    <div class="lm-content">
+                        <h2>Ztrácíte 90 % návštěvníků. <br><span class="text-accent">Zabrzděte to.</span></h2>
+                        <p>Stáhněte si případovku s 5 největšími "zabijáky" konverzí, které ničí váš e-shop, a zjistěte,
+                            jak z návštěvníků udělat platící zákazníky.</p>
+                        <form id="ebook-form" class="ebook-form">
+                            <input type="text" id="ebook-name" placeholder="Vaše jméno" required>
+                            <input type="email" id="ebook-email" placeholder="vas@email.cz" required>
+                            <button type="submit" class="btn btn-primary">Chci E-book ZDARMA</button>
+                        </form>
+                        <p class="form-success glass-success" id="ebook-success"
+                            style="display:none; margin-top: 16px;">Skvělé! Odkaz ke stažení letí do vaší schránky.
+                            (Mock submit)</p>
+                    </div>
+                    <div class="lm-image">
+                        <div class="ebook-mockup">
+                            <i data-lucide="book-open"></i>
+                            <span>E-book<br>ZDARMA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="kontakt" class="contact section">
+            <div class="glow-bg bottom-left"></div>
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Info -->
+                    <div class="contact-info reveal-left">
+                        <h2 class="section-title">Získat <span class="text-accent">nabídku</span></h2>
+                        <p class="contact-subtitle">Začněte získávat více poptávek pro svůj byznys ještě dnes.</p>
+
+                        <div class="quick-contacts">
+                            <a href="#" class="qc-btn glass">
+                                <i data-lucide="message-circle" style="color: #25D366;"></i> WhatsApp
+                            </a>
+                            <a href="#" class="qc-btn glass">
+                                <i data-lucide="instagram" style="color: #E1306C;"></i> Instagram
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form & Calendly -->
+                    <div class="contact-form-wrapper glass reveal-right">
+                        <div class="contact-tabs"
+                            style="display: flex; gap: 8px; background: rgba(255, 255, 255, 0.05); padding: 6px; border-radius: var(--radius-md); margin-bottom: 24px;">
+                            <button type="button" class="contact-tab active" data-target="form-tab">Napsat
+                                zprávu</button>
+                            <button type="button" class="contact-tab" data-target="calendly-tab">Domluvit call</button>
+                        </div>
+
+                        <!-- Form Tab -->
+                        <div id="form-tab" class="contact-tab-content active">
+                            <form id="lead-form" class="contact-form">
+                                <div class="form-group">
+                                    <label for="name">Jméno *</label>
+                                    <input type="text" id="name" name="name" placeholder="Jan Novák" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="contact-method">Email nebo telefon *</label>
+                                    <input type="text" id="contact-method" name="contact-method"
+                                        placeholder="jan@email.cz" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Mám zájem o:</label>
+                                    <div class="checkbox-group">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" id="package-start" name="service[]" value="start">
+                                            <span class="chip-label">Start (Micro-web)</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" id="package-eshop" name="service[]" value="eshop">
+                                            <span class="chip-label">E-shop</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" id="package-care-monthly" name="service[]"
+                                                value="care-monthly">
+                                            <span class="chip-label">Care (Měsíčně)</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" id="package-care-yearly" name="service[]"
+                                                value="care-yearly">
+                                            <span class="chip-label">Care (Ročně)</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Zpráva</label>
+                                    <textarea id="message" name="message" rows="3"
+                                        placeholder="S čím můžeme pomoci?"></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-full btn-submit">
+                                    Pošlete poptávku – odpovíme do 24 hodin
+                                </button>
+                                <p class="form-success glass-success" style="display:none;">Děkujeme! Brzy se vám
+                                    ozveme.
+                                </p>
+                            </form>
+                        </div>
+
+                        <!-- Calendly Tab -->
+                        <div id="calendly-tab" class="contact-tab-content"
+                            style="display: none; height: 100%; min-height: 600px; padding: 12px 0;">
+                            <!-- Calendly inline widget begin -->
+                            <div class="calendly-inline-widget" data-url="https://calendly.com/hopumedia"
+                                style="min-width:320px;height:100%;min-height:550px;"></div>
+                            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"
+                                async></script>
+                            <!-- Calendly inline widget end -->
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <img src="images/logo.png" alt="HopuMedia Logo" class="logo-img">
+                </a>
+            </div>
+
+            <ul class="footer-links">
+                <li><a href="#sluzby">Služby</a></li>
+                <li><a href="#cenik">Ceník</a></li>
+                <li><a href="#projekty">Ukázky</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+
+            <div class="footer-bottom">
+                <p>HopuMedia – micro-webs & e-shopy.</p>
+                <p class="footer-copy">&copy; <span id="year"></span> HopuMedia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA Bottom Bar -->
+    <div class="mobile-sticky-cta" id="mobile-sticky-cta">
+        <a href="#kontakt" class="btn btn-primary btn-full">Získat nezávaznou nabídku</a>
+    </div>
+
+    <!-- Portfolio Modals -->
+    <div class="modal-overlay" id="portfolio-modal">
+        <div class="modal-content glass">
+            <button class="modal-close" aria-label="Zavřít překryv"><i data-lucide="x"></i></button>
+            <div class="modal-body">
+                <div class="modal-img-placeholder">
+                    <i data-lucide="image" id="modal-icon"></i>
+                </div>
+                <div class="modal-tags" id="modal-tags">
+                    <!-- Tags dynamic -->
+                </div>
+                <h2 id="modal-title">Project Title</h2>
+                <div class="modal-divider"></div>
+                <div id="modal-desc" class="modal-description">
+                    <!-- Text dynamic -->
+                </div>
+
+                <div class="modal-metrics" id="modal-metrics">
+                    <!-- Metrics dynamic -->
+                </div>
+
+                <div class="modal-actions">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-full"
+                        id="modal-external-link" style="margin-bottom: 12px; display: none;">
+                        Prohlédnout web <i data-lucide="external-link"></i>
+                    </a>
+                    <a href="#kontakt" class="btn btn-primary btn-full modal-cta" id="modal-cta">Chci podobný web</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <!-- Floating WhatsApp Widget -->
+    <a href="https://wa.me/420720654240" target="_blank" rel="noopener noreferrer" class="whatsapp-widget"
+        aria-label="Napište nám na WhatsApp">
+        <i data-lucide="message-circle"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
